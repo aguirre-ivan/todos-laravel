@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/todos', function () {
-    return view('todos.index');
-});
-
 Route::get('/welcome', function () {
     return view('welcome');
-})->name('todos');
+});
 
-Route::post('todos', [TodosController::class, 'store'])->name('todos');
+Route::get('/todos', [TodosController::class, 'index'])->name('todos');
+
+Route::post('/todos', [TodosController::class, 'store'])->name('todos');
+
+// Route::get('/todos-list', [TodosController::class, 'index'])->name('todos-list');

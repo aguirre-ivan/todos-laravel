@@ -20,18 +20,6 @@
                     <li class="nav-item">
                         <a class="nav-link nav-icon"
                             href="">
-                            Add todo
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-icon"
-                            href="">
-                            Todos list
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-icon"
-                            href="">
                             Categories
                         </a>
                     </li>
