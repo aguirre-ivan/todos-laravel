@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include ('components._todo_form')
-@include ('components._list')
+@include ('components._add_todo_form')
+@include ('components._todos_list')
 
 @endsection

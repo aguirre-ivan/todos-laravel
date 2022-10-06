@@ -27,4 +27,33 @@ class TodosController extends Controller
 
         return view('todos.index', ['todos' => $todos]);
     }
+
+    public function show($id)
+    {
+        $todo = Todo::find($id);
+
+        return view('todos.show', ['todo' => $todo]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $todo = Todo::find($id);
+
+        $request->validate([
+            'title' => 'required|min:3',
+        ]);
+
+        $todo->title = $request->title;
+        $todo->save();
+
+        return redirect()->route('todos')->with('success', 'Todo updated');
+    }
+
+    public function destroy($id)
+    {
+        $todo = Todo::find($id);
+        $todo->delete();
+
+        return redirect()->route('todos')->with('success', 'Todo deleted');
+    }
 }
