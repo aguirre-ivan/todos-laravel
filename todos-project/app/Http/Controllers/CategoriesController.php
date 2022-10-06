@@ -37,8 +37,8 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|min:3|max:15',
+        $this->validate($request, [
+            'name' => 'required|unique:categories|max:255',
             'color' => 'required|max:7',
         ]);
 
@@ -47,7 +47,7 @@ class CategoriesController extends Controller
         $category->color = $request->color;
         $category->save();
 
-        return redirect()->route('todos')->with('success', 'Added new category');
+        return redirect()->route('categories.index')->with('success', 'Category has been added');
     }
 
     /**
