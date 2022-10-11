@@ -4,13 +4,17 @@ A simple Todo app made in Laravel.
 
 ## Installation
 
-Clone the repository 
+Clone the repository:
 
 	git clone git@github.com:aguirre-ivan/todos-laravel.git
 
-Cd into `todos-project` folder
+cd into `todos-project` folder:
 
 	cd todos-laravel/todos-project
+
+Change the permissions:
+
+	chmod 755 . -R
 
 Copy `.env.example` file to `.env.`:
 
@@ -28,11 +32,11 @@ Generate the app key with artisan:
 
 This project is made with [bitnami/laravel](https://hub.docker.com/r/bitnami/laravel/) image.
 
-Just build the project with docker compose
+Just build the project with docker compose:
 
 	docker compose up -d
 
-Do the database migrations
+Do the database migrations:
 
 	docker exec -i todos-laravel-server php artisan migrate
 
