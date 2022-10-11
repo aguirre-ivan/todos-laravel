@@ -20,10 +20,6 @@ Install project dependencies with composer:
 
 	composer install
 
-Do a database migration:
-
-	php artisan migrate
-
 Generate the app key with artisan:
 
 	php artisan key:generate
@@ -35,6 +31,10 @@ This project is made with [bitnami/laravel](https://hub.docker.com/r/bitnami/lar
 Just build the project with docker compose
 
 	docker compose up -d
+
+Do the database migrations
+
+	docker exec -i todos-laravel-server php artisan migrate
 
 Now you can go to [http://localhost:8001/todos](http://localhost:8001/todos) with your browser.
 
