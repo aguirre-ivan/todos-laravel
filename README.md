@@ -14,7 +14,7 @@ cd into `todos-project` folder:
 
 Change the permissions:
 
-	chmod 755 . -R
+	sudo chmod 755 . -R
 
 Copy `.env.example` file to `.env.`:
 
