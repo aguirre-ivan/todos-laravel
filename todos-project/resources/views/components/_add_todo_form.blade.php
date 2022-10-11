@@ -20,6 +20,18 @@
                 class="form-control">
         </div>
 
+        <div class="mb-3">
+            <label for="category-select"
+                class="form-label">Category</label>
+            <select id="category-select"
+                class="form-select mb-3"
+                name="category_id">
+                @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
         <div class="d-grid gap-2 col-6 ms-auto">
             <button type="submit"
                 class="btn btn-primary">Add</button>

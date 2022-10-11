@@ -13,6 +13,8 @@
         @enderror
 
         <div class="mb-3">
+            <label for="name"
+                class="form-label">Edit todo</label>
             <input type="text"
                 name="title"
                 placeholder="Todo title"
@@ -20,9 +22,30 @@
                 value="{{ $todo->title }}">
         </div>
 
+        <div class="mb-3">
+            <label for="category-select"
+                class="form-label">Category</label>
+            <select id="category-select"
+                class="form-select mb-3"
+                name="category_id">
+                @foreach ($categories as $category)
+                @if ($category == $category_selected)
+                <option value="{{ $category->id }}"
+                    selected>
+                    {{ $category->name }}
+                </option>
+                @else
+                <option value="{{ $category->id }}">
+                    {{ $category->name }}
+                </option>
+                @endif
+                @endforeach
+            </select>
+        </div>
+
         <div class="d-grid gap-2 col-6 ms-auto">
             <button type="submit"
-                class="btn btn-primary">Update title</button>
+                class="btn btn-primary">Update</button>
         </div>
     </form>
 </div>

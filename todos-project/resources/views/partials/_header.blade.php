@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand"
-                href="">
+                href="{{ route('todos') }}">
                 ToDos
             </a>
             <button class="navbar-toggler"
@@ -19,7 +19,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link nav-icon"
-                            href="">
+                            href=" {{ route('categories.index') }} ">
                             Categories
                         </a>
                     </li>

@@ -1,5 +1,6 @@
 <div class="container w-25 bg-dark px-4 py-3 mt-4 rounded text-white">
-    @foreach ($todos as $todo)
+    @if ($category->todos->count() > 0)
+    @foreach ($category->todos as $todo)
     <div class="card bg-secondary my-2">
         <div class="card-body row">
             <div class="col-md-8 d-flex align-items-center">
@@ -20,4 +21,9 @@
         </div>
     </div>
     @endforeach
+    @else
+    <h6>
+        Todos not found to this category.
+    </h6>
+    @endif
 </div>
