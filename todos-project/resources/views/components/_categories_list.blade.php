@@ -3,25 +3,20 @@
     <div class="card bg-secondary my-2">
         <div class="card-body row">
             <div class="col-md-8 d-flex align-items-center">
-                <a href="{{ route('categories.show', ['id' => $category->id]) }}">
-                    {{ $category->name }}
+                <a class="d-flex align-items-center gap-2"
+                    href="{{ route('categories.show', ['category' => $category->id]) }}">
+                    <span class="color-container"
+                        style="background-color: {{ $category->color }}"></span> {{ $category->name }}
                 </a>
             </div>
             <div class="col-md-4 d-flex justify-content-end">
-                <form action="{{ route('categories-destroy', [$category->id]) }}"
+                <form action="{{ route('categories.destroy', [$category->id]) }}"
                     method="POST">
                     @method('DELETE')
                     @csrf
-                    <div>
-                        <a class="d-flex align-items-center gap-2"
-                            href="{{ route('categories.show', ['category' => $category->id]) }}">
-                            <span class="color-container"
-                                style="background-color: {{ $category->color }}"></span> {{ $category->name }}
-                        </a>
-                    </div>
                     <button type="submit"
                         class="btn-close btn-close-white"
-                        aria-label="Close"></button>
+                        aria-label="Delete"></button>
                 </form>
             </div>
         </div>

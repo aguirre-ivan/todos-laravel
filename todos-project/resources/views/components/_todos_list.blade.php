@@ -14,7 +14,7 @@
                     @csrf
                     <button type="submit"
                         class="btn-close btn-close-white"
-                        aria-label="Close"></button>
+                        aria-label="Delete"></button>
                 </form>
             </div>
         </div>

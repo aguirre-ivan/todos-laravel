@@ -89,11 +89,11 @@ class CategoriesController extends Controller
             'color' => 'required|max:7',
         ]);
 
-        $category->title = $request->title;
-        $category->category = $request->category;
+        $category->name = $request->name;
+        $category->color = $request->color;
         $category->save();
 
-        return redirect()->route('categories')->with('success', 'Category updated');
+        return redirect()->route('categories.index')->with('success', 'Category updated');
     }
 
     /**
@@ -107,6 +107,6 @@ class CategoriesController extends Controller
         $category = Category::find($id);
         $category->delete();
 
-        return redirect()->route('categories')->with('success', 'Category deleted');
+        return redirect()->route('categories.index')->with('success', 'Category deleted');
     }
 }
