@@ -36,5 +36,5 @@ Just build the project with docker compose
 
 	docker compose up -d
 
-Now you can go to [http://localhost:8001/todos]() with your browser.
+Now you can go to [http://localhost:8001/todos](http://localhost:8001/todos) with your browser.
 
