@@ -24,11 +24,11 @@
             <label for="category-select"
                 class="form-label">Category</label>
             <select id="category-select"
-                class="form-select mb-3">
-                <option selected>Select a category</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                class="form-select mb-3"
+                name="category_id">
+                @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
 

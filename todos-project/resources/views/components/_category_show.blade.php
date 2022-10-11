@@ -14,7 +14,7 @@
 
         <div class="mb-3">
             <label for="name"
-                class="form-label">Edit</label>
+                class="form-label">Edit category</label>
             <input type="text"
                 name="name"
                 placeholder="Category name"
@@ -33,9 +33,9 @@
                     value="{{ $category->color }}"
                     title="Choose your color">
             </div>
-            <div class="col-md-8 d-flex justify-content-end">
+            <div class="d-grid gap-2 col-6 ms-auto">
                 <button type="submit"
-                    class="btn btn-primary">Update category</button>
+                    class="btn btn-primary">Update</button>
             </div>
         </div>
     </form>
