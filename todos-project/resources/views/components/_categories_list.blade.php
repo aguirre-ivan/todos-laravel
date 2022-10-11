@@ -46,7 +46,7 @@
                                         class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cancel</button>
                                     <button type="submit"
-                                        class="btn btn-primary">Continue</button>
+                                        class="btn btn-danger">Continue</button>
                                 </div>
                             </div>
                         </div>
