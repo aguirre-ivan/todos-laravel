@@ -105,6 +105,11 @@ class CategoriesController extends Controller
     public function destroy($id)
     {
         $category = Category::find($id);
+
+        $category->todos()->each(function ($todo) {
+            $todo->delete();
+        });
+
         $category->delete();
 
         return redirect()->route('categories.index')->with('success', 'Category deleted');
